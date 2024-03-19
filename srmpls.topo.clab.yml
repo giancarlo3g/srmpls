@@ -174,11 +174,11 @@ topology:
       kind: linux
       mgmt-ipv4: 172.20.20.120
       exec:
-        # - ip link add link eth1 name eth1.10 type vlan id 10
-        # - ifconfig eth1.10 192.168.0.1
-        # - ifconfig eth1.10 netmask 255.255.255.0 
-        - ifconfig eth1 192.168.0.1
-        - ifconfig eth1 netmask 255.255.255.0 
+        - ip link add link eth1 name eth1.10 type vlan id 10
+        - ifconfig eth1.10 192.168.0.1
+        - ifconfig eth1.10 netmask 255.255.255.0 
+        # - ifconfig eth1 192.168.0.1
+        # - ifconfig eth1 netmask 255.255.255.0 
     tester2:
       kind: linux
       mgmt-ipv4: 172.20.20.121
@@ -219,11 +219,11 @@ topology:
       kind: linux
       mgmt-ipv4: 172.20.20.127
       exec:
-        # - ip link add link eth1 name eth1.10 type vlan id 10
-        # - ifconfig eth1.10 192.168.0.14
-        # - ifconfig eth1.10 netmask 255.255.255.0
-        - ifconfig eth1 192.168.0.14
-        - ifconfig eth1 netmask 255.255.255.0
+        - ip link add link eth1 name eth1.10 type vlan id 10
+        - ifconfig eth1.10 192.168.0.14
+        - ifconfig eth1.10 netmask 255.255.255.0
+        # - ifconfig eth1 192.168.0.14
+        # - ifconfig eth1 netmask 255.255.255.0
     tester16:
       kind: linux
       mgmt-ipv4: 172.20.20.128
