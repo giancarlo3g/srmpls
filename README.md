@@ -1,5 +1,5 @@
-# Nokia Lab for SRv6
-This is a Nokia Lab for SRv6 interworking with RSVP for Epipe services
+# Nokia Lab for Seamless MPLS
+This is a Nokia Lab for Seampless MPLS including SR-ISIS and BGP-LU
 
 ![](Topology.png)
 
@@ -8,7 +8,7 @@ This is a Nokia Lab for SRv6 interworking with RSVP for Epipe services
 Topology file is included in this repo.
 
 ```
-sudo containerlab deploy -t srv6.topo.clab.yml
+sudo containerlab deploy -t srmpls.topo.clab.yml
 ```
 
 Make sure you have updated/uploaded Nokia SROS License File in the location as mentioned in the license section of the topology file.
