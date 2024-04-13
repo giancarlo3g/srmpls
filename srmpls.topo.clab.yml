@@ -177,20 +177,23 @@ topology:
         - ip link add link eth1 name eth1.10 type vlan id 10
         - ifconfig eth1.10 192.168.0.1
         - ifconfig eth1.10 netmask 255.255.255.0 
-        # - ifconfig eth1 192.168.0.1
-        # - ifconfig eth1 netmask 255.255.255.0 
     tester2:
       kind: linux
       mgmt-ipv4: 172.20.20.121
       exec:
-        - ifconfig eth1 192.168.0.2
-        - ifconfig eth1 netmask 255.255.255.0
+        - ip link add link eth1 name eth1.10 type vlan id 10
+        - ifconfig eth1.10 192.168.0.2
+        - ifconfig eth1.10 netmask 255.255.255.0 
+        - ip link add link eth1 name eth1.20 type vlan id 20
+        - ifconfig eth1.20 192.168.20.2
+        - ifconfig eth1.20 netmask 255.255.255.0 
     tester3:
       kind: linux
       mgmt-ipv4: 172.20.20.122
       exec:
-        - ifconfig eth1 192.168.0.3
-        - ifconfig eth1 netmask 255.255.255.0
+        - ip link add link eth1 name eth1.10 type vlan id 10
+        - ifconfig eth1.10 192.168.0.3
+        - ifconfig eth1.10 netmask 255.255.255.0 
     tester4:
       kind: linux
       mgmt-ipv4: 172.20.20.123
@@ -201,8 +204,12 @@ topology:
       kind: linux
       mgmt-ipv4: 172.20.20.124
       exec:
-        - ifconfig eth1 192.168.0.5
-        - ifconfig eth1 netmask 255.255.255.0
+        - ip link add link eth1 name eth1.10 type vlan id 10
+        - ifconfig eth1.10 192.168.0.5
+        - ifconfig eth1.10 netmask 255.255.255.0
+        - ip link add link eth1 name eth1.20 type vlan id 20
+        - ifconfig eth1.20 192.168.20.5
+        - ifconfig eth1.20 netmask 255.255.255.0  
     tester11:
       kind: linux
       mgmt-ipv4: 172.20.20.125
@@ -222,14 +229,13 @@ topology:
         - ip link add link eth1 name eth1.10 type vlan id 10
         - ifconfig eth1.10 192.168.0.14
         - ifconfig eth1.10 netmask 255.255.255.0
-        # - ifconfig eth1 192.168.0.14
-        # - ifconfig eth1 netmask 255.255.255.0
     tester16:
       kind: linux
       mgmt-ipv4: 172.20.20.128
       exec:
-        - ifconfig eth1 192.168.0.16
-        - ifconfig eth1 netmask 255.255.255.0
+        - ip link add link eth1 name eth1.10 type vlan id 10
+        - ifconfig eth1.10 192.168.0.16
+        - ifconfig eth1.10 netmask 255.255.255.0 
 
 #################################################################################################################################################
 #Telemetry 
