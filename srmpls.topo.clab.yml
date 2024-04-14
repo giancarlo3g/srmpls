@@ -186,7 +186,8 @@ topology:
         - ifconfig eth1.10 netmask 255.255.255.0 
         - ip link add link eth1 name eth1.20 type vlan id 20
         - ifconfig eth1.20 192.168.200.2
-        - ifconfig eth1.20 netmask 255.255.255.0 
+        - ifconfig eth1.20 netmask 255.255.255.0
+        - route add default gw 192.168.200.1 eth1.20 
     tester3:
       kind: linux
       mgmt-ipv4: 172.20.20.122
@@ -209,7 +210,8 @@ topology:
         - ifconfig eth1.10 netmask 255.255.255.0
         - ip link add link eth1 name eth1.20 type vlan id 20
         - ifconfig eth1.20 192.168.20.5
-        - ifconfig eth1.20 netmask 255.255.255.0  
+        - ifconfig eth1.20 netmask 255.255.255.0
+        - route add default gw 192.168.20.1 eth1.20
     tester11:
       kind: linux
       mgmt-ipv4: 172.20.20.125
